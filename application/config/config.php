@@ -21,7 +21,7 @@ if (!defined('BASEPATH'))
 
 $config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-$config['static_path'] = "/var/www/giz2/code/webdesk/";
+$config['static_path'] = "/var/www/ir/";
 /*
   |--------------------------------------------------------------------------
   | Index File
