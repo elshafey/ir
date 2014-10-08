@@ -35,7 +35,7 @@
 <?php } else { ?>
     <html>
         <body style="width: 1366px;background-color: white">
-            <div style="float: left;width: 100%;">
+            <div style="float: left;width: 100%;margin-bottom: 500px">
                 <img  src="<?php echo site_url('business-cards/En-back.jpg') ?>" style="width: 100%;float: left">
             </div>
             <div style="float: left;width: 100%;margin-top: 900px">
