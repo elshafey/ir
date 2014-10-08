@@ -38,7 +38,7 @@
             <div style="float: left;width: 100%;">
                 <img  src="<?php echo site_url('business-cards/En-back.jpg') ?>" style="width: 100%;float: left">
             </div>
-            <div style="float: left;width: 100%;margin-top: 500px">
+            <div style="float: left;width: 100%;margin-top: 900px">
                 <img  src="<?php echo site_url('business-cards/En-Front.jpg') ?>"  style="width: 100%;float: left">
                 <div class="card-info" style="font-weight: bold;color:rgb(39,155,212)"><?php echo $_REQUEST['name'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['title'] ?></div>
