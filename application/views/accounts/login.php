@@ -1,16 +1,18 @@
-<form method="POST">
+<h1><div class="red-small-separator"></div><strong>LOGIN</strong> TO YOUR ACCOUNT</h1>
+<form method="POST" autocomplete="off">
     <ul>
         <li>
-            <?php echo lang('accounts_login_username', 'username') ?>
-            <input name="email" id="email" class="txtbox" />
+            <input name="email" id="email"  type="text" class="login-txtbox"  />
         </li>
         <li>
-            <?php echo lang('accounts_login_password', 'password') ?>
-            <input name="password" id="password" class="txtbox" type="password" />
+            <input name="password" id="password"  type="password" class="login-txtbox"  />
         </li>
-        <li class="btns">
-            <input name="save" value="Login" type="submit" />
+
+        <li>
+            <button type="submit" name="submit" value="" class="login-btn" />
         </li>
     </ul>
 </form>
+
+<!--<a href="" class="forgot-pass">FORGOT YOUR PASSOWRD</a>-->
 

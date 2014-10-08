@@ -1,46 +1,42 @@
 
-<ul>
-    <li>
-
-    </li>
-    <li>
-        <table id="table" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th><?php echo trim(lang('accounts_create_name'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_title'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_tel'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_direct'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_fax'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_charity'),':') ?></th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th><?php echo trim(lang('accounts_create_name'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_title'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_tel'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_direct'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_fax'),':') ?></th>
-                    <th><?php echo trim(lang('accounts_create_charity'),':') ?></th>
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php foreach ($users as $key => $user) {?>
-                <tr>
-                    <td><?php echo $user->name_en.' - '.$user->name_ar; ?></td>
-                    <td><?php echo $user->title_en.' - '.$user->title_ar; ?></td>
-                    <td><?php echo $user->tel; ?></td>
-                    <td><?php echo $user->direct; ?></td>
-                    <td><?php echo $user->fax; ?></td>
-                    <td><?php echo $user->charity; ?></td>
-                </tr>
+<table id="table" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th><?php echo trim(lang('accounts_create_name'), ':') ?></th>
+            <th><?php echo trim(lang('accounts_create_title'), ':') ?></th>
+            <?php if (is_super_admin()) { ?>
+                <th>Branch</th>
+            <?php } ?>
+            <th>Email</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($users as $key => $user) { ?>
+            <tr>
+                <td><?php echo $user->name; ?></td>
+                <td><?php echo $user->title; ?></td>
+                <?php if (is_super_admin()) { ?>
+                    <td><?php echo $user->branch; ?></td>
                 <?php } ?>
-            </tbody></table>
-    </li>
-</ul>
+                <td><?php echo $user->email; ?></td>
+                <td><a href="<?php echo site_url('accounts/edit/' . $user->id) ?>">Edit</a></td>
+            </tr>
+        <?php } ?>
+    </tbody></table>
+
 <script>
     $(document).ready(function() {
-        $('#table').dataTable();
+        $('#table').dataTable({
+//                searching: false,
+<?php if (count($users) <= 10) { ?>
+            paging:false,
+<?php } ?>
+        });
     });
 </script>
+<style>
+    #table_length{
+        display: none;
+    }
+</style>

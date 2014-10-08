@@ -7,16 +7,19 @@
  */
 class Users extends CI_Model {
 
-    var $name_en;
-    var $name_ar;
-    var $title_en;
-    var $title_ar;
-    var $tel;
-    var $direct;
-    var $web;
-    var $fax;
+    var $name;
+    var $title;
+    var $branch_id;
+//    var $name_en;
+//    var $name_ar;
+//    var $title_en;
+//    var $title_ar;
+//    var $tel;
+//    var $direct;
+//    var $web;
+//    var $fax;
     var $email;
-    var $charity;
+//    var $charity;
 
     function __construct() {
         parent::__construct();
@@ -34,8 +37,15 @@ class Users extends CI_Model {
     }
     
     function get_all(){
-        $query=$this->db->get('users');
-        
+        $db=$this->db
+                ->from('users u')
+                ->join('branches b', 'b.id=u.branch_id','left')
+                ->select('u.*,b.name as branch');
+        if(!is_super_admin()){
+            $db->where('branch_id', get_branch_id());
+            $db->where('user_type', 2);
+        }
+        $query=$db->get();
         return $query->result();
     }
 

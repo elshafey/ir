@@ -44,8 +44,8 @@ select{
 .frm_error_msg{
     color: red;
 }
-.btns{
-    margin-left: 170px;
+.btns input:first-child{
+    margin-left: 179px;
 }
 .thumb_div{
     /*    background-position: right center;*/
@@ -66,11 +66,11 @@ table{
 }
 
 input[type="submit"],input[type="button"]{
+    background: none repeat scroll 0 0 #7D7D7D;
     border: 1px solid #C4C4C4;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+    color: #FFFFFF;
     cursor: pointer;
+    padding: 3px 10px;
 }
 input[type="submit"]:hover{
     color: #444;
@@ -121,4 +121,8 @@ span.cke_skin_kama{
 }
 .faq_manage{
     float: right;
+}
+
+.cncl-btn{
+    text-decoration: none;
 }

@@ -1,0 +1,396 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    font-family: 'montserratregular';
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/montserrat-regular-webfont.eot');
+    src: url('fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
+        url('fonts/montserrat-regular-webfont.woff') format('woff'),
+        url('fonts/montserrat-regular-webfont.ttf') format('truetype'),
+        url('fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    background-color: #b5b5b5;	
+}
+ul{
+    list-style: none;	
+}
+.header-red-line{
+    width: 	100%;
+    height: 3px;
+    background-color: #bf041f;
+    display: block;	
+}
+
+.header-white-section{
+    height: 228px;
+    width: 100%;
+    display: block;
+    background-color: #FFF;
+}
+
+.header-white-section .logo{
+    background-image: url(../images/logo.png);
+    width: 180px;
+    height: 277px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    z-index: 2000;
+}
+
+.login-box{
+    width: 361px;
+    height: 378px;
+    background-color: #666565;
+    border-bottom: 3px solid #bf041f;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    z-index: 999;
+}
+.login-box h1{
+    color: #e7e3e4;
+    font-weight: normal;
+    font-size: 13px;
+    position: relative;
+    top: 100px;
+}
+
+.red-small-separator{
+    background-image:url(../images/red-separator.png);
+    width: 3px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 40px;
+    position: relative;
+    top: 4px;
+}
+
+.shadow{
+    background-image: url(../images/shadow.png);
+    background-repeat: repeat-x;
+    height: 21px;
+    display: block;
+    position: relative;
+}
+
+.login-box form ul {
+    list-style: none;	
+    position: relative;
+    top: 120px;
+    left: 40px;
+}
+
+.login-box form ul li{
+    margin-bottom: 15px;	
+}
+
+.login-txtbox{
+    background-color: #ededed;
+    color: #333;
+    width: 274px;
+    height: 30px;
+    padding: 3px;
+    -webkit-box-shadow: 10px 10px 65px 0px rgba(78,78,78,1);
+    -moz-box-shadow: 10px 10px 65px 0px rgba(78,78,78,1);
+    box-shadow: 10px 10px 65px 0px rgba(78,78,78,1);
+}
+
+.login-btn{
+    background-image: url(../images/login-btn.png);
+    width: 91px;
+    height: 28px;
+    display: block;
+    position: relative;
+    right: 82px;
+    float: right;
+    top: 15px;
+}
+
+.forgot-pass{
+    color: #FFF;
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    top: 220px;
+    left: 100px;
+}
+
+.copyrights {
+    font-size: 12px;
+    text-align: center;
+    color: #666565;
+    position:relative;
+    top: 20px;
+}
+.copyrights span {
+    color: #bb0520;	
+}
+
+#inside-body{
+    background-color: #e2e2e2;	
+}
+
+.inside-header{
+    background-color: #FFF;
+    height: 105px;
+    display: block;
+}
+
+.logo-inside{
+    background-image: url(../images/inside-logo.png);
+    width: 141px;
+    height: 171px;
+    display: block;
+    position: relative;
+    left: 40px;
+    z-index: 2000;
+}
+
+#container{
+    z-index: 1000;
+    position: relative;	
+}
+
+#container .left{
+    width: 230px;
+    min-height: 600px;
+    background-color: #3d3d3d;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#container .left ul {
+    list-style: none;	
+}
+#container .left ul li {
+    height: 55px;
+    border-bottom: 1px solid #7d7d7d;
+    position: relative;
+    top: 80px;
+}
+#container .left ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: Myriad Pro Regular, Arial;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    background-image: url(../images/templete-item.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+#container .left .choose-template {
+    height: 40px;
+    background-color: #e02222;
+    position: relative;
+    top: 80px;
+}
+#container .left .choose-template span{
+    background-image: url(../images/choose-template-icon.png);
+    background-repeat: no-repeat;
+    min-height: 14px;
+    position: relative;
+    color: #FFF;
+    top: 11px;
+    left: 20px;
+    padding-left: 25px;
+}
+
+#container .right{
+    display: inline-block;
+    position: absolute;
+    left: 230px;
+    right: 0px;
+}
+#container .right .shadow{
+    background-image: url(../images/inside-shadow.png);
+    background-repeat: repeat-x;
+    height: 13px;
+    display: block;
+}
+#container .right .title-section{
+    background-color: #c9c7c7;
+    height: 85px;
+    display: block;
+}
+#container .right .title-section span{
+    position: relative;
+    top: 22px;
+    left: 25px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #3d3d3d;
+}
+
+div.dropdown {
+    color: #555555;
+    height: 17px;
+    left: 1080px;
+    position: relative;
+    text-align: left;
+    top: -156px;
+    width: 143px;
+    z-index: 2005;
+}
+div.submenu
+{
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    z-index: 100;
+    width: 135px;
+    display: none;
+    margin-left: 10px;
+    padding: 40px 0 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.dropdown  li a {
+
+    color: #555555;
+    display: block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 6px 15px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.dropdown li a:hover{
+    background:#155FB0;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+a.account {
+    font-size: 14px;
+    line-height: 16px;
+    color: #555;
+    position: absolute;
+    z-index: 110;
+    display: block;
+    padding: 11px 0 0 20px;
+    height: 28px;
+    width: 121px;
+    margin: -11px 0 0 -10px;
+    text-decoration: none;
+    background: url(../images/arrow.png) 116px 17px no-repeat;
+    cursor:pointer;
+}
+.root
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    font-size: 11px;
+    padding: 11px 0 0 0px;
+    border-top:1px solid #dedede;
+
+
+}
+
+
+#top-menu{
+     border-bottom: 1px solid #E3E3E3;
+    border-top: 1px solid #E3E3E3;
+    display: block;
+    height: 27px;
+    left: 232px;
+    position: relative;
+    top: -115px;
+    width: 82%;
+    z-index: 2000;
+}
+
+#top-menu a{
+    position: relative;
+    top: 3px;
+    color: #8b8b8b;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#top-menu a:hover{
+    text-decoration: underline;	
+}
+#top-menu span{
+    position: relative;
+    top: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#menu > li {
+    float: left;
+    height: 27px;
+    margin-top: 0px;
+}
+
+#menu ul {
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+#menu ul li a {
+    width: 80px;
+    top:-3px;
+}
+#menu li:hover ul.noJS {
+    display: block; 
+}
+
+/* Styles for message control
+-----------------------------------------------------------*/
+#identity-message {
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 20px;
+        width: 95%;
+}
+.cls-txt-normal {color: #3C7F32;font-size: 16px;}
+.cls-message-error .cls-txt-normal {color: red;font-size: 16px;}
+
+/*.cls-message-success {border: 1px solid #990000; background: #228811 ;}*/
+
+.cls-message-error {border: 1px solid #990000; background: #feebef;}
+
+.cls-message-notice {border: 1px solid #caca00; background: #fff2aa;}
+
+.cls-message-confirm {border: 1px solid #a3bfb1; background: #f5fffa;}
+
+.cls-message-success {
+    background-color: #D5FFCE;
+    background-image: url("../images/success_icon.png");
+    background-position: 648px 5px;
+    background-repeat: no-repeat;
+    border: 1px solid #9ADF8F;
+    clear: both;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+    padding-left: 45px;
+    padding-top: 10px;
+    width: 92%;
+    background-position: 10px 13px !important;
+    margin-right: 0 !important;
+    margin-top: -6px !important;
+}

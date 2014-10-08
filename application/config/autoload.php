@@ -116,7 +116,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('users','branches','languages','businesscards');
 
 
 /* End of file autoload.php */

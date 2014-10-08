@@ -78,15 +78,25 @@ $template['active_template'] = 'admin_template';
 //$template['home']['parser_method'] = 'parse';
 //$template['home']['parse_template'] = FALSE;
 
-$template['admin_template']['template'] = 'template';
+$template['admin_template']['template'] = 'inside_template';
 $template['admin_template']['regions'] = array(
    'header',
-   'toolbar',
+   'side_menu',
    'content',
    'footer',
 );
 $template['admin_template']['parser'] = 'parser';
 $template['admin_template']['parser_method'] = 'parse';
 $template['admin_template']['parse_template'] = FALSE;
+$template['login_template']['template'] = 'login_template';
+$template['login_template']['regions'] = array(
+   'header',
+   'toolbar',
+   'content',
+   'footer',
+);
+$template['login_template']['parser'] = 'parser';
+$template['login_template']['parser_method'] = 'parse';
+$template['login_template']['parse_template'] = FALSE;
 /* End of file template.php */
 /* Location: ./system/application/config/template.php */
