@@ -33,7 +33,7 @@
         </body>
     </html>
 <?php } else { ?>
-<!--    <html>
+    <html>
         <body style="width: 1366px;background-color: white">
             <div style="float: left;width: 100%;margin-bottom: 500px">
                 <img  src="<?php echo site_url('business-cards/En-back.jpg') ?>" style="width: 100%;float: left">
@@ -66,6 +66,6 @@
                 }
             </style>
         </body>
-    </html>-->
-<img src="<?php echo base_url('business-cards/new_card.jpg') ?>" style="width:1366px " />
+    </html>
+<!--<img src="<?php echo base_url('business-cards/new_card.jpg') ?>" style="width:1366px " />-->
 <?php } ?>
