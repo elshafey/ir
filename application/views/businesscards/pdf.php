@@ -35,12 +35,12 @@
 <?php } else { ?>
     <html>
         <body style="width: 100%;background-color: white;float: left">
-            <div style="float: left;width: 100%;margin-bottom: 10px">
+<!--            <div style="float: left;width: 100%;margin-bottom: 10px">
                 <img  src="<?php echo site_url('business-cards/En-back.jpg') ?>" style="width: 100%;float: left">
             </div>
             <div style="float: left;width: 100%;">
                 <img  src="<?php echo site_url('business-cards/En-Front.jpg') ?>"  style="width: 100%;float: left">
-<!--                <div class="card-info" style="font-weight: bold;color:rgb(39,155,212)"><?php echo $_REQUEST['name'] ?></div>
+                <div class="card-info" style="font-weight: bold;color:rgb(39,155,212)"><?php echo $_REQUEST['name'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['title'] ?></div>
                 <div class="card-info" style="margin-top: 162px"><?php echo $_REQUEST['address'] ?></div>
                 <div class="card-info" style="margin-top: 60px"><?php echo $_REQUEST['tel'] ?></div>
@@ -48,7 +48,7 @@
                 <div class="card-info" style="margin-top: 20px"><?php echo $_REQUEST['fax'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
                 <div class="card-info" style="margin-top: 20px"><?php echo $_REQUEST['web'] ?></div>
-                <div class="card-info" style="margin-top: 20px"><?php echo $_REQUEST['charity'] ?></div>-->
+                <div class="card-info" style="margin-top: 20px"><?php echo $_REQUEST['charity'] ?></div>
 
             </div>
             <style>
@@ -66,8 +66,8 @@
                     top: -709px;
                     width: 55%;
                 }
-            </style>
+            </style>-->
+            <img src="<?php echo base_url('business-cards/new_card.jpg') ?>" style="width:100%" />
         </body>
     </html>
-<!--<img src="<?php echo base_url('business-cards/new_card.jpg') ?>" style="width:1366px " />-->
 <?php } ?>

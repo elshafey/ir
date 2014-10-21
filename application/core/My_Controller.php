@@ -79,7 +79,7 @@ class My_Controller extends CI_Controller {
 
 //        $url = site_url().'home/preview' . '?' . http_build_query($this->users->get_user_by_id(get_user_id()));
         $name = md5(date('ymdHis'));
-        if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1') {
+        if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1'||TRUE) {
             $dir = $this->config->item('static_path');
 //            echo ('xvfb-run -a wkhtmltopdf --page-width 85 --page-height 55 -B 0 T 0 -L 0 -R 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"');exit;
             if (shell_exec('xvfb-run -a wkhtmltopdf --page-width 85 --page-height 55 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"')) {
