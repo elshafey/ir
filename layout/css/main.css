@@ -394,3 +394,122 @@ a.account {
     margin-right: 0 !important;
     margin-top: -6px !important;
 }
+
+.template{
+    width: 303px;
+    height: 107px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.template .footer{
+    width: 303px;
+    height: 29px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #FFF;
+    font-size: 11px;
+}
+.template .footer a{
+    position: relative;
+    left: 10px;
+    top: 8px;
+    color: #FFF;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Calibri;
+    text-transform: uppercase;
+}
+.template .footer .view-more-icon{
+    background-image: URL(../images/view-more-icon.png);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.template.red{
+    background-color: #c0504d;
+}
+.template .footer.red{
+    background-color: #933330;    
+}
+.template.green{
+    background-color: #9bbb59;
+}
+.template .footer.green{
+    background-color: #729036;  
+}
+.template.purple{
+    background-color: #8064a2;
+}
+.template .footer.purple{
+    background-color: #5e457c;    
+}
+.template.blue{
+    background-color: #4bacc6;
+}
+.template .footer.blue{
+    background-color: #317587;    
+}
+
+.template .bc-icon{
+    background-image: URL(../images/bussiness-card-icon.png);
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 39px;
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.template .banner-icon{
+    background-image: URL(../images/banner-icon.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 49px;
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.template .letterhead-icon{
+    background-image: URL(../images/letterhead-icon.png);
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 32px;
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.template .complimentslip-icon{
+    background-image: URL(../images/complimentslip-icon.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.template .template-txt{
+    color: #FFF;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: Calibri;
+    text-align: right;
+}
+.template .template-txt .number{
+    font-family: Calibri;
+    font-size: 30px;
+    display: block;
+}

@@ -19,9 +19,9 @@ if (!defined('BASEPATH'))
  */
 
 
-$config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'];
+$config['base_url'] = 'http://localhost/ir/';
 
-$config['static_path'] = "/var/www/ir/";
+$config['static_path'] = "d:/Dominos/ir/";
 /*
   |--------------------------------------------------------------------------
   | Index File

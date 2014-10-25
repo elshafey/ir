@@ -19,7 +19,8 @@ class Home extends My_Controller {
     }
 
     function index() {
-//        $this->template->write_view('content', 'signin_view', $this->data, FALSE);
+        $this->template->write_view('side_menu', 'dashboard/side_menu');
+        $this->template->write_view('content', 'dashboard/dashboard', $this->data, FALSE);
         $this->template->render();
     }
 
