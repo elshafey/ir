@@ -36,16 +36,16 @@
 <?php } else { ?>
     <html>
         <body style="width: 100%;background-color: white;float: left">
-            <div style="float: left;width: 100%;">
+            <div style="float: left;width: 100%;margin-bottom: 0px;">
                 <img  src="<?php echo site_url('business-cards/back.jpg') ?>" style="width: 100%;float: left">
             </div>
-            <div style="float: left;width: 100%;">
+            <div style="float: left;width: 100%;margin-top: 0px">
                 <img  src="<?php echo site_url('business-cards/face.jpg') ?>"  style="width: 100%;float: left">
                 <div class="container">
                     <div class="card-info"   style="font-size: 11px;color:rgb(39,155,212);padding-top: 0;"><?php echo $_REQUEST['name'] ?></div>
                     <div class="card-info"  style="font-size: 11px;padding-top: 0;"><?php echo $_REQUEST['title'] ?></div>
-                    <div class="card-info" style="margin-top: 35px;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
-                    <div class="card-info" style="margin-top: 18px;padding-top: 0;"><?php echo $_REQUEST['tel'] ?></div>
+                    <div class="card-info" style="margin-top: 50px;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
+                    <div class="card-info" style="margin-top: 23px;padding-top: 0;"><?php echo $_REQUEST['tel'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['fax'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
@@ -70,18 +70,19 @@
                                 }*/
                 *{
                     margin: 0px;
+                    margin-right: 0px!important;
                     padding: 0px;
                     font-family: sans-serif;
                     font-size: 8px;
                 }
                 .container{
-                    left: 167px;
+                    left: 185px;
                     position: absolute;
                     z-index: 1000;
                     top: 320px;
                 }
                 .card-info{
-                    padding-top: 5px;
+                    padding-top: 7px;
                     width: 100%;
                     float: left;
                     clear: both;
