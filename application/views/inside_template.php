@@ -41,7 +41,7 @@
                         <a href="<?php echo site_url('/') ?>">Dashboard</a><span>|</span>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('business_cards') ?>">Business Card</a><span>|</span>
+                        <a href="<?php echo site_url('business_cards/choose_template') ?>">Business Card</a><span>|</span>
                     </li>
                     <li>
                         <a href="<?php echo site_url('accounts') ?>">Accounts Management</a>

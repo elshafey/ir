@@ -4,7 +4,7 @@
         <span class="number">04</span>
         Business Card Templates</div>
     <div class="footer red">
-        <a href="">View more</a>        
+        <a href="<?php echo base_url();?>business_cards">View more</a>        
         <span class="view-more-icon"></span>
     </div>
 </div>

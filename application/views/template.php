@@ -55,7 +55,7 @@
                             <a href="<?php echo site_url('/') ?>">Dashboard</a><span>|</span>
                         </li>
                         <li>
-                            <a target="_blank" href="<?php echo site_url('home/busines_card') ?>">Business Card</a><span>|</span>
+                            <a target="_blank" href="<?php echo site_url('home/busines_card/') ?>">Business Card</a><span>|</span>
                         </li>
                         <li>
                             <a href="javascript:;">Profile</a>

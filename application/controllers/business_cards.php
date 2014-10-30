@@ -19,6 +19,11 @@ class Business_cards extends My_Controller {
         $this->template->write_view('content', 'businesscards/list', $this->data, FALSE);
         $this->template->render();
     }
+    
+    function choose_template() {
+        $this->template->write_view('content', 'businesscards/business_cards_templates', $this->data, FALSE);
+        $this->template->render();
+    }
 
     function create() {
         $this->data['page_title'] = 'Create New Business Card Template';

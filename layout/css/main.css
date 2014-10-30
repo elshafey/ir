@@ -282,7 +282,7 @@ div.submenu
     text-decoration: none;
 
 }
-a.account {
+a.account {    
     font-size: 14px;
     line-height: 16px;
     color: #555;
@@ -296,6 +296,9 @@ a.account {
     text-decoration: none;
     background: url(../images/arrow.png) 116px 17px no-repeat;
     cursor:pointer;
+}
+.account span{
+    font-family: Calibri, Myriad Pro Regular, Arial !important
 }
 .root
 {

@@ -19,9 +19,11 @@ form label{
 
 .txtbox{
     border: 1px solid #CCC;
-    height: 20px;
+    height: 25px;
     width: 250px;
     padding: 2px;
+    background-color: #a0a0a0;
+    color: #FFF;
 }
 
 textarea{
@@ -32,10 +34,12 @@ textarea{
 }
 
 select{
-    padding: 1px;
     border: 1px solid #CCC;
-    height: 24px;
-    width: 250px;
+    height: 25px;
+    width: 256px;
+    padding: 2px;
+    background-color: #a0a0a0;
+    color: #FFF;
 }
 
 .star{
@@ -55,7 +59,7 @@ select{
     height: 35px;
     margin-right: 280px;
     width: 100px;
-/*    margin-top: -35px;*/
+    /*    margin-top: -35px;*/
 }
 .image_order{
     padding-right: 58px;
@@ -104,7 +108,7 @@ span.cke_skin_kama{
 }
 .info-answer{
     float: left;
-    
+
 }
 .separator{
     float: left;
