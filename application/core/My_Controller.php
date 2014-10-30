@@ -82,7 +82,7 @@ class My_Controller extends CI_Controller {
         if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1'||TRUE) {
             $dir = $this->config->item('static_path');
 //            echo ('xvfb-run -a wkhtmltopdf --page-width 85 --page-height 55 -B 0 T 0 -L 0 -R 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"');exit;
-            if (shell_exec('xvfb-run -a wkhtmltopdf --page-width 85 --page-height 55 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"')) {
+            if (shell_exec('xvfb-run -a wkhtmltopdf --page-width 95 --page-height 55.3 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"')) {
                 // set HTTP response headers
                 header("Content-Type: application/pdf");
                 header("Cache-Control: max-age=0");
