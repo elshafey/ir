@@ -1,42 +1,45 @@
 <?php if ($type == 'preview') { ?>
     <html>
-        <body style="width: 700px;float: left">
+        <body style="width: 360px;margin: auto">
             <div style="float: left;width: 100%;">
                 <img  src="<?php echo site_url('business-cards/back.jpg') ?>" style="float: left;width: 100%;">
             </div>
             <div style="float: left;width: 100%;margin-top: 5px;">
                 <img  src="<?php echo site_url('business-cards/face.jpg') ?>"  style="float: left;width: 100%;">
-                <div class="container">
-                    <div  style="font-family: DINNextLTPro-Bold;color:rgb(39,155,212)"><?php echo $_REQUEST['name'] ?></div>
-                    <div style=""><?php echo $_REQUEST['title'] ?></div>
-                    <div style="margin-top: 10%"><?php echo $_REQUEST['address'] ?></div>
-                    <div style="margin-top: 4.1%"><?php echo $_REQUEST['tel'] ?></div>
-                    <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
-                    <div class="card-info" style=""><?php echo $_REQUEST['fax'] ?></div>
-                    <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
-                    <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
-                    <div class="card-info" style=""><?php echo $_REQUEST['charity'] ?></div>
-                </div>
+            </div>
+            <div class="container">
+                <div  style="font-size: 12px;color:rgb(39,155,212)"><?php echo $_REQUEST['name'] ?></div>
+                <div style=""><?php echo $_REQUEST['title'] ?></div>
+                <div style="margin-top: 39px"><?php echo $_REQUEST['address'] ?></div>
+                <div style="margin-top: 17px"><?php echo $_REQUEST['tel'] ?></div>
+                <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
+                <div class="card-info" style=""><?php echo $_REQUEST['fax'] ?></div>
+                <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
+                <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
+                <div class="card-info" style=""><?php echo $_REQUEST['charity'] ?></div>
             </div>
             <style>
                 @font-face {
                     font-family: DINNextLTPro-Regular;
                     src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Regular_1.otf') ?>');
                 }
-                @font-face {
-                    font-family: DINNextLTPro-Bold;
-                    src: url('<?php echo base_url('layout/fonts/DINNextLTPro-BoldCondensed_0.otf') ?>');
-                }
                 *{
                     font-family: DINNextLTPro-Regular;
+                    font-size: 7px;
                 }
                 .container{
-                    left: 281px;
+                    float: left;
+                    left: 143px;
                     position: relative;
-                    top: -326px;
+                    top: -171px;
+                    width: 180px;
                 }
                 .card-info{
-                    padding-top: 6px;
+                    padding-top: 4.5px;
+                }
+                .container > div {
+                    float: left;
+                    width: 100%;
                 }
             </style>
         </body>
@@ -62,20 +65,6 @@
                 </div>
             </div>
             <style>
-                /*                *{
-                                    font-family: sans-serif;
-                                    margin: 0;
-                                    padding: 0;
-                                }
-                                .card-info{
-                                    float: left;
-                                    font-size: 27px;
-                                    margin-left: 39%;
-                                    margin-top: 16px;
-                                    position: relative;
-                                    top: -709px;
-                                    width: 55%;
-                                }*/
                 @font-face {
                     font-family: DINNextLTPro-Regular;
                     src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Regular_1.otf') ?>');
