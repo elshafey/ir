@@ -54,9 +54,9 @@
                 <img  src="<?php echo site_url('business-cards/face.jpg') ?>"  style="width: 100%;float: left">
                 <div class="container">
                     <div class="card-info"   style="font-family: DINNextLTPro-Bold!important;font-size: 13px;;font-weight: bold;color:rgb(39,155,212);padding-top: 0;"><?php echo $_REQUEST['name'] ?></div>
-                    <div class="card-info"  style="font-size: 11px;padding-top: 0;"><?php echo $_REQUEST['title'] ?></div>
-                    <div class="card-info" style="margin-top: 47px;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
-                    <div class="card-info" style="margin-top: 23px;padding-top: 0;"><?php echo $_REQUEST['tel'] ?></div>
+                    <div class="card-info"  style="padding-top: 0;"><?php echo $_REQUEST['title'] ?></div>
+                    <div class="card-info" style="margin-top: 50px;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
+                    <div class="card-info" style="margin-top: 26px;padding-top: 0;"><?php echo $_REQUEST['tel'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['fax'] ?></div>
                     <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
@@ -78,16 +78,16 @@
                     margin-right: 0px!important;
                     padding: 0px;
                     font-family: DINNextLTPro-Regular;
-                    font-size: 8px;
+                    font-size: 7px;
                 }
                 .container{
-                    left: 185px;
+                    left: 187px;
                     position: absolute;
                     z-index: 1000;
                     top: 320px;
                 }
                 .card-info{
-                    padding-top: 7px;
+                    padding-top: 9px;
                     width: 100%;
                     float: left;
                     clear: both;
