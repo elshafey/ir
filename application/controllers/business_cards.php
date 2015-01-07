@@ -7,7 +7,7 @@ class Business_cards extends My_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->template->write_view('side_menu', 'businesscards/side_menu');
+        
     }
 
     function index() {
@@ -16,11 +16,14 @@ class Business_cards extends My_Controller {
         $this->data['page_title'] = 'Custom Business Cards List';
         $this->template->add_css('layout/css/admin/jquery.dataTables.css');
         $this->template->add_js('layout/js/jquery/jquery.dataTables.min.js');
+        $this->template->write_view('side_menu', 'businesscards/side_menu');
         $this->template->write_view('content', 'businesscards/list', $this->data, FALSE);
         $this->template->render();
     }
     
     function choose_template() {
+        $this->data['templates_count']=  $this->businesscards->get_count();
+        $this->template->write_view('side_menu', 'businesscards/side_menu_main');
         $this->template->write_view('content', 'businesscards/business_cards_templates', $this->data, FALSE);
         $this->template->render();
     }
@@ -46,6 +49,7 @@ class Business_cards extends My_Controller {
             }
         }
 
+        $this->template->write_view('side_menu', 'businesscards/side_menu');
         $this->template->write_view('content', 'businesscards/create', $this->data, FALSE);
         $this->template->render();
     }
@@ -79,6 +83,7 @@ class Business_cards extends My_Controller {
             $_POST = $this->businesscards->get_one_by_id($id);
         }
 
+        $this->template->write_view('side_menu', 'businesscards/side_menu');
         $this->template->write_view('content', 'businesscards/preview', $this->data, FALSE);
         $this->template->render();
     }

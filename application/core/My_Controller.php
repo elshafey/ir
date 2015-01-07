@@ -81,7 +81,7 @@ class My_Controller extends CI_Controller {
         $name = md5(date('ymdHis'));
         if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1'||TRUE) {
             $dir = $this->config->item('static_path');
-            $command ='xvfb-run -a -s "-screen 0 1024x768x24" wkhtmltopdf --dpi 300 --page-width 95 --page-height 55.3 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+            $command ='xvfb-run -a -s "-screen 0 512x380x24" wkhtmltopdf --dpi 300 --page-width 91 --page-height 61 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
 //            echo $command;exit;
             if (shell_exec($command)) {
                 // set HTTP response headers

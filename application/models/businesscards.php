@@ -34,8 +34,8 @@ class Businesscards extends CI_Model {
             $this->$key = $value;
         }
         if ($id) {
-            $this->modified_at=  date('ymdHis');
-            $this->modified_by=  get_user_id();
+            $this->modified_at = date('ymdHis');
+            $this->modified_by = get_user_id();
             $this->db->update('businesscards', $this, array('id' => $id));
         } else {
             $this->db->insert('businesscards', $this);
@@ -54,6 +54,18 @@ class Businesscards extends CI_Model {
         }
         $query = $db->get();
         return $query->result();
+    }
+
+    function get_count() {
+        $db = $this->db
+                ->from('businesscards b')
+                ->select('count(*) as count');
+        if (!is_super_admin()) {
+            $db->where('b.branch_id', get_branch_id());
+        }
+        $query = $db->get();
+        $result=($query->result());
+        return $result[0]->count;
     }
 
     function get_one_by_id($id) {

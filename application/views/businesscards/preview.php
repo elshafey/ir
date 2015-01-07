@@ -19,5 +19,5 @@
     });
 </script>
 <div style="float: right;margin-right: 80px">
-    <iframe src="<?php echo site_url('business_cards/pdf/preview').'?'.  http_build_query($_POST) ?>" width="500" height="435" scrolling="no" />
+    <iframe src="<?php echo site_url('business_cards/pdf/preview').'?'.  http_build_query($_POST) ?>" width="500" height="500" scrolling="no" />
 </div>
