@@ -11,7 +11,7 @@ class Template_conroller extends My_Controller {
     var $titles=array();
     public function __construct() {
         parent::__construct();
-        $this->load->model(['compliments']);
+        $this->load->model('compliments');
     }
 
     function index() {
