@@ -27,5 +27,9 @@ function get_templates_list(){
         'title'=>'Compliments',
         'link'=>'compliment'
     );
+    $templates['letter_heads']=array(
+        'title'=>'Letter Heads',
+        'link'=>'letter_head'
+    );
     return $templates;
 }
