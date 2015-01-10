@@ -2,99 +2,44 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
+require_once 'application/controllers/template_conroller.php';
 
-class Business_cards extends My_Controller {
+class Business_cards extends Template_conroller {
+
+    var $view = 'businesscards';
+    var $controller = 'business_cards';
+    var $model = 'businesscards';
+    var $titles = array();
 
     public function __construct() {
         parent::__construct();
-        
+        $this->titles = array(
+            'index' => 'Custom Business Cards List',
+            'create' => 'Create New Business Card Template',
+            'preview' => 'Preview Business Card Template',
+        );
     }
 
-    function index() {
-
-        $this->data['businesscards'] = $this->businesscards->get_all();
-        $this->data['page_title'] = 'Custom Business Cards List';
-        $this->template->add_css('layout/css/admin/jquery.dataTables.css');
-        $this->template->add_js('layout/js/jquery/jquery.dataTables.min.js');
-        $this->template->write_view('side_menu', 'businesscards/side_menu');
-        $this->template->write_view('content', 'businesscards/list', $this->data, FALSE);
-        $this->template->render();
-    }
-    
-    function choose_template() {
-        $this->data['templates_count']=  $this->businesscards->get_count();
-        $this->template->write_view('side_menu', 'businesscards/side_menu_main');
-        $this->template->write_view('content', 'businesscards/business_cards_templates', $this->data, FALSE);
-        $this->template->render();
+    function pdf($type = 'preview') {
+        $this->data['type'] = $type;
+        $this->load->view('businesscards/pdf', $this->data);
     }
 
-    function create() {
-        $this->data['page_title'] = 'Create New Business Card Template';
-        if ($_POST) {
-            $_POST['created_by'] = get_user_id();
-            $_POST['modified_by'] = get_user_id();
-            $_POST['created_at'] = date('ymdHis');
-            $_POST['modified_at'] = date('ymdHis');
-            if (!is_super_admin()) {
-                $_POST['branch_id'] = get_branch_id();
-            }
-            if ($this->businesscards->process_form()) {
-                $message = array(
-                    'msg_type' => 'success',
-                    'msg_text' => 'Template has been added successfully.'
-                );
+    protected function generate() {
 
-                $this->session->set_flashdata("message", $message);
-                redirect('/business_cards');
-            }
+        $url = site_url().'business_cards/pdf/export?'.http_build_query($_POST);
+        $name = md5(date('ymdHis'));
+        $dir = $this->config->item('static_path');
+        $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 91 --page-height 60.506 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+//            echo $command;exit;
+        if (shell_exec($command)) {
+            // set HTTP response headers
+            header("Content-Type: application/pdf");
+            header("Cache-Control: max-age=0");
+            header("Accept-Ranges: none");
+            header("Content-Disposition: attachment; filename=\"$name.pdf\"");
+//                header('Location: ' . site_url() . 'uploads/business-cards/' . $name . '.pdf');
+            echo file_get_contents('uploads/business-cards/' . $name . '.pdf');
         }
-
-        $this->template->write_view('side_menu', 'businesscards/side_menu');
-        $this->template->write_view('content', 'businesscards/create', $this->data, FALSE);
-        $this->template->render();
     }
-
-    function preview($id) {
-        $this->data['page_title'] = 'Preview Business Card Template';
-
-        if ($_POST) {
-            switch ($_POST['action_type']) {
-                case 'preview':
-                    unset($this->form_validation);
-                    break;
-                case 'convert':
-                    $this->generate(site_url().'business_cards/pdf/export?'.http_build_query($_POST));
-                    break;
-                default:
-                    unset($_POST['action_type']);
-                    if ($this->businesscards->process_form($id)) {
-                        $message = array(
-                            'msg_type' => 'success',
-                            'msg_text' => 'Template has been edited successfully.'
-                        );
-
-                        $this->session->set_flashdata("message", $message);
-                        redirect('/business_cards');
-                    }
-                    break;
-            }
-        } else {
-            unset($this->form_validation);
-            $_POST = $this->businesscards->get_one_by_id($id);
-        }
-
-        $this->template->write_view('side_menu', 'businesscards/side_menu');
-        $this->template->write_view('content', 'businesscards/preview', $this->data, FALSE);
-        $this->template->render();
-    }
-    
-    function export_pdf(){
-        
-    }
-    
-    function pdf($type='preview'){
-        $this->data['type']=$type;
-        $this->load->view('businesscards/pdf',  $this->data);
-    }
-
 }

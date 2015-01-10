@@ -70,7 +70,7 @@ $autoload['libraries'] = array('database','template', 'session','form_validation
 
 
 
-$autoload['helper'] = array('email','language', 'locale', 'url', 'html', 'form', 'cookie', 'theme','message','url2','grid','txt','account');
+$autoload['helper'] = array('email','language', 'locale', 'url', 'html', 'form', 'cookie', 'theme','message','url2','grid','txt','account','lists');
 
 
 

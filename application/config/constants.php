@@ -43,5 +43,7 @@ define('SIDE_MENU_DOWNLOADS_NAMESPACE','side_menu_downloads');
 define('CONTACT_US_EMAIL', 'marketing@nahdetmisr.com,nehad.hashem@nahdetmisr.com');
 define('BECOME_AGENT_MAIL', 'marketing@nahdetmisr.com,nehad.hashem@nahdetmisr.com');
 define('CAREERS_EMAIL', 'recruitment@nahdetmisr.com,nehad.hashem@nahdetmisr.com');
+define('BANNERS_TYPE_WIDE', 1);
+define('BANNERS_TYPE_PULLUP', 2);
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

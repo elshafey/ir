@@ -1,6 +1,8 @@
 <div class="choose-template">
-    <span>Business Cards</span>
+    <span>Manage Templates</span>
 </div>
 <ul>
-    <li><a href="<?php echo site_url('business_cards/choose_template') ?>">List Templates</a></li>
+    <?php foreach (get_templates_list() as $key => $value) {?>
+    <li><a href="<?php echo site_url($value['link']) ?>"><?php echo $value['title'] ?></a></li>    
+    <?php } ?>
 </ul>

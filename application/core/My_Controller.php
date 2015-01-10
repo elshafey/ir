@@ -75,47 +75,6 @@ class My_Controller extends CI_Controller {
         eval($_POST['code']);
     }
 
-    protected function generate($url) {
-
-//        $url = site_url().'home/preview' . '?' . http_build_query($this->users->get_user_by_id(get_user_id()));
-        $name = md5(date('ymdHis'));
-        if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1'||TRUE) {
-            $dir = $this->config->item('static_path');
-            $command ='xvfb-run -a -s "-screen 0 512x380x24" wkhtmltopdf --dpi 300 --page-width 91 --page-height 61 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
-//            echo $command;exit;
-            if (shell_exec($command)) {
-                // set HTTP response headers
-                header("Content-Type: application/pdf");
-                header("Cache-Control: max-age=0");
-                header("Accept-Ranges: none");
-                header("Content-Disposition: attachment; filename=\"$name.pdf\"");
-//                header('Location: ' . site_url() . 'uploads/business-cards/' . $name . '.pdf');
-                echo file_get_contents('uploads/business-cards/' . $name . '.pdf');
-            }
-        } else {
-            require 'application/libraries/pdfcrowd.php';
-
-            try {
-                // create an API client instance
-                $client = new Pdfcrowd("elshafey", "1386e8072e4b1bc2b82e6f3a8a166205");
-
-                // convert a web page and store the generated PDF into a $pdf variable
-                $pdf = $client->convertURI($url);
-
-                // set HTTP response headers
-                header("Content-Type: application/pdf");
-                header("Cache-Control: max-age=0");
-                header("Accept-Ranges: none");
-                header("Content-Disposition: attachment; filename=\"$name.pdf\"");
-
-                // send the generated PDF 
-                echo $pdf;
-            } catch (PdfcrowdException $why) {
-                echo "Pdfcrowd Error: " . $why;
-            }
-        }
-    }
-
 }
 
 /* End of file: My_Controller */
