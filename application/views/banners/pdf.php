@@ -27,11 +27,6 @@
     <html>
         <body style="width: 100%;background-color: white;float: left">
             <?php if ($_REQUEST['type'] == BANNERS_TYPE_WIDE) { ?>
-                <div style="float: left;width: 100%;margin-bottom: 0px;">
-                    <img  src="<?php echo site_url('banners/IRW-Banner-Wide-temp.jpg') ?>" style="width: 100%;float: left">
-                    <div class="main-title" style="font-family: DINNextLTPro-Regular;"><?php echo $_REQUEST['main_title'] ?></div>
-                    <div class="sub-title" style="font-family:DINNextLTPro-Bold!important;"><?php echo $_REQUEST['sub_title'] ?></div>
-                </div>
                 <style>
                     @font-face {
                         font-family: DINNextLTPro-Bold;
@@ -44,34 +39,40 @@
                     *{
                         margin: 0px;
                         padding: 0px;
+                        font-family: DINNextLTPro-Bold;
 
+                    }
+                    .main-title{
+                        color: white;
+                        font-size: 285pt;
+                        font-weight: bold;
+                        position: absolute;
+                        z-index: 1000;
+                        left: 190px;
+                        top: 2125px;
+                        width: 2700px;
                     }
                     .sub-title{
                         text-align: left;
                         color: black;
-                        font-size: 197pt;
+                        font-size: 160pt;
                         position: absolute;
                         z-index: 1000;
-                        left: 400px;
-                        top: 4350px;
-                        width: 3000px;
-                    }
-                    .main-title{
-                        font-family:DINNextLTPro-Bold !important;
-                        color: white;
-                        font-size: 330pt;
-                        position: absolute;
-                        z-index: 1000;
-                        left: 400px;
-                        top: 2850px;
-                        width: 3000px;
+                        left: 190px;
+                        top: 3280px;
+                        width: 2700px;
                     }
                 </style>
+                <div style="float: left;width: 100%;margin-bottom: 0px;">
+                    <img  src="<?php echo site_url('banners/IRW-Banner-Wide-temp.jpg') ?>" style="width: 100%;float: left">
+                    <div class="main-title" style="font-family: DINNextLTPro-Bold;"><?php echo $_REQUEST['main_title'] ?></div>
+                    <div class="sub-title" style="font-family: DINNextLTPro-Regular!important;"><?php echo $_REQUEST['sub_title'] ?></div>
+                </div>
             <?php } elseif ($_REQUEST['type'] == BANNERS_TYPE_PULLUP) { ?>
                 <div style="float: left;width: 100%;margin-bottom: 0px;">
                     <img  src="<?php echo site_url('banners/IRW-Pullup-Banners-sample-temp.jpg') ?>" style="width: 100%;float: left">
-                    <div class="main-title" style="font-family: DINNextLTPro-Regular;"><?php echo $_REQUEST['main_title'] ?></div>
-                    <div class="sub-title" style="font-family:DINNextLTPro-Bold!important;"><?php echo $_REQUEST['sub_title'] ?></div>
+                    <div class="main-title" style="font-family: DINNextLTPro-Bold;"><?php echo $_REQUEST['main_title'] ?></div>
+                    <div class="sub-title" style="font-family:DINNextLTPro-Regular!important;"><?php echo $_REQUEST['sub_title'] ?></div>
                 </div>
                 <style>
                     @font-face {
@@ -90,22 +91,23 @@
                     .main-title{
                         font-family:DINNextLTPro-Bold !important;
                         color: white;
-                        font-size: 270pt;
+                        font-size: 210pt;
+                        font-weight: bold;
                         position: absolute;
                         z-index: 1000;
-                        left: 300px;
-                        top: 5900px;
-                        width: 2500px;
+                        left: 190px;
+                        top: 4400px;
+                        width: 2100px;
                     }
                     .sub-title{
                         text-align: left;
                         color: black;
-                        font-size: 140pt;
+                        font-size: 120pt;
                         position: absolute;
                         z-index: 1000;
-                        left: 300px;
-                        top: 7200px;
-                        width: 2500px;
+                        left: 190px;
+                        top: 5400px;
+                        width: 2100px;
                     }
                     
                 </style>

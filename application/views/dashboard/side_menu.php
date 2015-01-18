@@ -2,8 +2,7 @@
     <span>Templates</span>
 </div>
 <ul>
-    <li><a href="<?php echo site_url('business_cards/choose_template') ?>">Business Card</a></li>
-    <li><a href="<?php echo site_url('') ?>">Banner</a></li>
-    <li><a href="<?php echo site_url('') ?>">Letterhead</a></li>
-    <li><a href="<?php echo site_url('') ?>">Compliment Slip</a></li>
+    <?php foreach (get_templates_list() as $key => $value) {?>
+    <li><a href="<?php echo site_url($value['link']) ?>"><?php echo $value['title'] ?></a></li>    
+    <?php } ?>
 </ul>

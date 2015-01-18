@@ -30,7 +30,7 @@ class Business_cards extends Template_conroller {
         $url = site_url().'business_cards/pdf/export?'.http_build_query($_POST);
         $name = md5(date('ymdHis'));
         $dir = $this->config->item('static_path');
-        $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 91 --page-height 60.506 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+        $command = 'xvfb-run -a -s "-screen 0 1075x717x24" wkhtmltopdf --dpi 300 --page-width 92 --page-height 61.207 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
 //            echo $command;exit;
         if (shell_exec($command)) {
             // set HTTP response headers

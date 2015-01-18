@@ -58,11 +58,11 @@
             <div style="float: left;width: 100%;margin-top: 0px">
                 <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_2_temp_white.jpg') ?>"  style="width: 100%;float: left">
                 <div class="container">
-                    <div class="card-info"   style="font-family: DINNextLTPro-Medium;font-size: 16px;color:#329fff;padding-top: 0;"><?php echo $_REQUEST['name'] ?></div>
+                    <div class="card-info"   style="font-family: DINNextLTPro-Medium;font-size: 12pt;color:#329fff;padding-top: 0;"><?php echo $_REQUEST['name'] ?></div>
                     <div class="card-info"  style="font-family: DINNextLTPro-Medium;padding-top: 0"><?php echo $_REQUEST['title'] ?></div>
-                    <div class="card-info" style="font-family: DINNextLTPro-Medium;font-size: 9px;color:#329fff;padding-top: 35px;">Islamic Relief Worldwide</div>
+                    <div class="card-info" style="font-family: DINNextLTPro-Medium;font-size: 7pt;color:#329fff;padding-top: 25px;">Islamic Relief Worldwide</div>
                     <div class="card-info" style="font-family: DINNextLTPro-Medium;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
-                    <div style="margin-top: 24px;float: left">
+                    <div style="margin-top: 14px;float: left">
                         <div class="card-info" style="padding-top: 0;">
                             <span><?php echo $_REQUEST['tel'] ?></span>
                         </div>
@@ -110,29 +110,29 @@
                     margin-right: 0px!important;
                     padding: 0px;
                     font-family: DINNextLTPro-Regular;
-                    font-size: 9px;
+                    font-size: 7pt;
                     color: #435257;
                     text-align: left;
                 }
                 .container{
-                    left: 168px;
+                    left: 120px;
                     position: absolute;
                     z-index: 1000;
-                    top: 348px;
+                    top: 260px;
                     /*width: 100%;*/
                 }
                 .card-info{
-                    padding-top: 9px;
+                    padding-top: 2px;
                     width: 100%;
                     float: left;
                     clear: both;
                 }
                 .titles{
-                    left: 60px;
+                    left: 0px;
                     position: absolute;
                     z-index: 1000;
-                    top: 450px;
-                    width: 100px;
+                    top: 349px;
+                    width: 115px;
                 }
                 .titles *{
                     color: #329fff!important;

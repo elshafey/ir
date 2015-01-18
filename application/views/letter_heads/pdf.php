@@ -97,7 +97,7 @@
                 }
                 *{
                     font-family: DINNextLTPro-Regular;
-                    font-size: 8pt;
+                    font-size: 6pt;
                     color: #435257;
                     margin: 0;
                     padding: 0;
@@ -105,29 +105,29 @@
                 .bottom{
                     position: absolute;
                     z-index: 1000;
-                    right: 80px;
-                    top: 1363px;
-                    width: 268px;
+                    right: 60px;
+                    top: 1020px;
+                    width: 200px;
                 }
                 .left-details{float: left;}
                 .right-details{float: right;}
                 .left-details,.right-details{
-                    width: 150px;
+                    width: 120px;
                 }
                 .details{
                     position: absolute;
                     z-index: 1000;
-                    left: 324px;
-                    width:340px;
+                    left: 250px;
+                    width:260px;
                 }
                 .bottom-details{
-                    top: 1363px;
+                    top: 1020px;
                 }
                 .middle-details{
-                    top: 1343px;
+                    top: 1006px;
                 }
                 .top-details{
-                    top: 1324px;
+                    top: 992px;
                 }
             </style>
         </body>
