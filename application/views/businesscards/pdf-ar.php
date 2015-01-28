@@ -55,9 +55,9 @@
                 </div>
                 <div >
                     <span class="title">&nbsp;</span>
-                    <span class="details" style="width: 42%"><?php echo $_REQUEST['title'] ?></span>
+                    <span class="details" ><?php echo $_REQUEST['title'] ?></span>
                 </div>
-                <div  style="margin-top: 17px;">
+                <div  style="margin-top: 32px;">
                     <span class="title">&nbsp;</span>
                     <span class="details" style="color:#299FD5 ;font-family:DINNextLTPro-Medium ;">الإغاثة الإسلامية عبر العالم - المملكة المتحدة</span>
                 </div>
@@ -158,9 +158,9 @@
                     </div>
                     <div >
                         <span class="title">&nbsp;</span>
-                        <span class="details" style="width: 42%"><?php echo $_REQUEST['title'] ?></span>
+                        <span class="details"><?php echo $_REQUEST['title'] ?></span>
                     </div>
-                    <div  style="margin-top: 17px;">
+                    <div  style="margin-top: 32px;">
                         <span class="title">&nbsp;</span>
                         <span class="details" style="color:#299FD5 ;font-family:DINNextLTPro-Medium ;">الإغاثة الإسلامية عبر العالم - المملكة المتحدة</span>
                     </div>
