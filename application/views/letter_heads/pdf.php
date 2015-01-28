@@ -1,5 +1,8 @@
 <?php if ($type == 'preview') { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 500px;margin: auto">
             <div style="float: left;width: 100%;margin-top: 5px;">
                 <img  src="<?php echo site_url('letter_heads/IRW_LETTERHEAD_2014-sample_1_temp2_White.jpg') ?>"  style="float: left;width: 100%;">
@@ -66,6 +69,9 @@
     </html>
 <?php } else { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 100%;background-color: white;float: left">
             <div style="float: left;width: 100%;margin-bottom: 0px;">
                 <img  src="<?php echo site_url('letter_heads/IRW_LETTERHEAD_2014-sample_1_temp2_White.jpg') ?>" style="width: 100%;float: left">
@@ -121,13 +127,13 @@
                     width:260px;
                 }
                 .bottom-details{
-                    top: 1020px;
+                    top: 1018px;
                 }
                 .middle-details{
-                    top: 1006px;
+                    top: 1004px;
                 }
                 .top-details{
-                    top: 992px;
+                    top: 990px;
                 }
             </style>
         </body>

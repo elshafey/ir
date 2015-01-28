@@ -22,7 +22,14 @@ class Business_cards extends Template_conroller {
 
     function pdf($type = 'preview') {
         $this->data['type'] = $type;
-        $this->load->view('businesscards/pdf', $this->data);
+        switch ($_REQUEST['language_id']) {
+            case 2:
+                $this->load->view('businesscards/pdf-ar', $this->data);
+                break;
+            default:
+                $this->load->view('businesscards/pdf', $this->data);
+                break;
+        }
     }
 
     protected function generate() {

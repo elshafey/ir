@@ -1,5 +1,8 @@
 <?php if ($type == 'preview') { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 360px;margin: auto">
             <div style="float: left;width: 100%;margin-top: 5px;">
                 <img  src="<?php echo site_url('banners/IRW-Banner-Wide-temp.jpg') ?>"  style="float: left;width: 100%;">
@@ -25,6 +28,9 @@
     </html>
 <?php } else { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 100%;background-color: white;float: left">
             <?php if ($_REQUEST['type'] == BANNERS_TYPE_WIDE) { ?>
                 <style>

@@ -1,5 +1,8 @@
 <?php if ($type == 'preview') { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 360px;margin: auto">
             <div style="float: left;width: 100%;">
                 <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_1.jpg') ?>" style="float: left;width: 100%;">
@@ -15,7 +18,7 @@
                 <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
                 <div class="card-info" style="margin-top: 2px"><?php echo $_REQUEST['fax'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
-    <!--                <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
+<!--                 <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['charity'] ?></div>-->
             </div>
             <style>
@@ -51,6 +54,9 @@
     </html>
 <?php } else { ?>
     <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        </head>
         <body style="width: 100%;background-color: white;float: left">
             <div style="float: left;width: 100%;margin-bottom: 0px;">
                 <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_1.jpg') ?>" style="width: 100%;float: left">

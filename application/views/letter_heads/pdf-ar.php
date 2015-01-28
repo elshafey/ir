@@ -5,7 +5,7 @@
         </head>
         <body style="width: 500px;margin: auto">
             <div style="float: left;width: 100%;margin-top: 5px;">
-                <img  src="<?php echo site_url('compliments/IRW_COMPSLIP_2014-sample_2_temp2_white.jpg') ?>"  style="float: left;width: 100%;">
+                <img  src="<?php echo site_url('letter_heads/IRW_LETTERHEAD_AR_2014-sample_1_temp2.jpg') ?>"  style="float: left;width: 100%;">
             </div>
             <div class="top-details details">
                 <span class="left-details"><?php echo $_REQUEST['address'] ?></span>
@@ -18,10 +18,6 @@
             <div class="bottom-details details">
                 <span class="left-details"><?php echo $_REQUEST['country'] ?></span>
                 <span class="right-details"><?php echo $_REQUEST['email'] ?></span>
-            </div>
-            <div class="bottom">
-                <span style="text-align: left;float: left">Registered Charity No. 328158</span>
-                <span style="text-align: right;float: right">Company No. 23665572</span>
             </div>
             <style>
                 @font-face {
@@ -41,7 +37,7 @@
                     position: absolute;
                     z-index: 1000;
                     right: 38px;
-                    top: 204px;
+                    top: 665px;
                     width: 127px;
                 }
                 .left-details{float: left;}
@@ -52,17 +48,17 @@
                 .details{
                     position: absolute;
                     z-index: 1000;
-                    left: 160px;
+                    left: 181px;
                     width:160px;
                 }
                 .bottom-details{
-                    top: 203px;
+                    top: 665px;
                 }
                 .middle-details{
-                    top: 194px;
+                    top: 656px;
                 }
                 .top-details{
-                    top: 185px;
+                    top: 647px;
                 }
             </style>
         </body>
@@ -74,7 +70,7 @@
         </head>
         <body style="width: 100%;background-color: white;float: left">
             <div style="float: left;width: 100%;margin-bottom: 0px;">
-                <img  src="<?php echo site_url('compliments/IRW_COMPSLIP_2014-sample_2_temp2_white.jpg') ?>" style="width: 100%;float: left">
+                <img  src="<?php echo site_url('letter_heads/IRW_LETTERHEAD_AR_2014-sample_1_temp2.jpg') ?>" style="width: 100%;float: left">
             </div>
             <div class="top-details details">
                 <span class="left-details"><?php echo $_REQUEST['address'] ?></span>
@@ -88,10 +84,6 @@
                 <span class="left-details"><?php echo $_REQUEST['country'] ?></span>
                 <span class="right-details"><?php echo $_REQUEST['email'] ?></span>
             </div>
-            <div class="bottom">
-                <span style="text-align: left;float: left">Registered Charity No. 328158</span>
-                <span style="text-align: right;float: right">Company No. 23665572</span>
-            </div> 
             <style>
                 @font-face {
                     font-family: DINNextLTPro-Regular;
@@ -112,7 +104,7 @@
                     position: absolute;
                     z-index: 1000;
                     right: 60px;
-                    top: 305px;
+                    top: 1020px;
                     width: 200px;
                 }
                 .left-details{float: left;}
@@ -123,17 +115,17 @@
                 .details{
                     position: absolute;
                     z-index: 1000;
-                    left: 250px;
+                    left: 280px;
                     width:260px;
                 }
                 .bottom-details{
-                    top: 305px;
+                    top: 1018px;
                 }
                 .middle-details{
-                    top: 291px;
+                    top: 1004px;
                 }
                 .top-details{
-                    top: 277px;
+                    top: 990px;
                 }
             </style>
         </body>
