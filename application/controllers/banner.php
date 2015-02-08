@@ -28,24 +28,44 @@ class Banner extends Template_conroller {
 
     protected function generate() {
 
-        $url = site_url().'banner/pdf/export?'.http_build_query($_POST);
+        $url = site_url() . 'banner/pdf/export?' . http_build_query($_POST);
         $name = md5(date('ymdHis'));
         $dir = $this->config->item('static_path');
-        if($_POST['type']==BANNERS_TYPE_WIDE){
-            $size='--page-width 2000 --page-height 1101';
-        }elseif ($_POST['type']==BANNERS_TYPE_PULLUP) {
-            $size='--page-width 800 --page-height 2100';
-        }
-        $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 '.$size.' --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+        if ($_POST['action_type'] == 'convert_img') {
+            if ($_POST['type'] == BANNERS_TYPE_WIDE) {
+                $size = '--width 23636 --height 13007';
+            } elseif ($_POST['type'] == BANNERS_TYPE_PULLUP) {
+                $size = '--width 800 --height 2100';
+            }
+            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltoimage --quality 90 ' . $size . '  "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.png"';
 //            echo $command;exit;
-        if (shell_exec($command)) {
-            // set HTTP response headers
-            header("Content-Type: application/pdf");
-            header("Cache-Control: max-age=0");
-            header("Accept-Ranges: none");
-            header("Content-Disposition: attachment; filename=\"$name.pdf\"");
+            if (shell_exec($command)) {
+                // set HTTP response headers
+                header("Content-Type: image/png");
+                header("Cache-Control: max-age=0");
+                header("Accept-Ranges: none");
+                header("Content-Disposition: attachment; filename=\"$name.png\"");
+//                header('Location: ' . site_url() . 'uploads/business-cards/' . $name . '.png');
+                echo file_get_contents('uploads/business-cards/' . $name . '.png');
+            }
+        } else {
+            if ($_POST['type'] == BANNERS_TYPE_WIDE) {
+                $size = '--page-width 2000 --page-height 1101';
+            } elseif ($_POST['type'] == BANNERS_TYPE_PULLUP) {
+                $size = '--page-width 800 --page-height 2100';
+            }
+            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 ' . $size . ' --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+//            echo $command;exit;
+            if (shell_exec($command)) {
+                // set HTTP response headers
+                header("Content-Type: application/pdf");
+                header("Cache-Control: max-age=0");
+                header("Accept-Ranges: none");
+                header("Content-Disposition: attachment; filename=\"$name.pdf\"");
 //                header('Location: ' . site_url() . 'uploads/business-cards/' . $name . '.pdf');
-            echo file_get_contents('uploads/business-cards/' . $name . '.pdf');
+                echo file_get_contents('uploads/business-cards/' . $name . '.pdf');
+            }
         }
     }
+
 }

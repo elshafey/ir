@@ -1,4 +1,4 @@
-<div style="float: left;width:550px">
+<div style="float: left;width:600px">
     <form method="POST" id="form">
         <ul>
             <?php $this->load->view('banners/_form') ?>
@@ -9,12 +9,13 @@
             <!--<input type="button" id="preview" value="Preview Only" >-->
             <input type="button" id="save" value="Save&Finish" >
             <input type="button" id="convert" value="Export PDF" >
+            <!--<input type="button" id="convert_img" value="Export Img" >-->
             <a class="cncl-btn" href="<?php echo site_url('banner'); ?>"><?php echo lang('global_btn_cancel'); ?></a>
         </div>
     </form>
 </div>
 <script>
-    $('#preview,#save,#convert').click(function(){
+    $('#preview,#save,#convert,#convert_img').click(function(){
        $('#action_type').val($(this).attr('id')); 
        $('#form').submit();
     });

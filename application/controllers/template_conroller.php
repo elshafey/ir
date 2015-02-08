@@ -68,6 +68,7 @@ class Template_conroller extends My_Controller {
                     unset($this->form_validation);
                     break;
                 case 'convert':
+                case 'convert_img':
                     $this->generate();
                     break;
                 default:

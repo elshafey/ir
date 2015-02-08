@@ -18,7 +18,7 @@
                 <div class="card-info" style=""><?php echo $_REQUEST['direct'] ?></div>
                 <div class="card-info" style="margin-top: 2px"><?php echo $_REQUEST['fax'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['email'] ?></div>
-<!--                 <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
+    <!--                 <div class="card-info" style=""><?php echo $_REQUEST['web'] ?></div>
                 <div class="card-info" style=""><?php echo $_REQUEST['charity'] ?></div>-->
             </div>
             <style>
@@ -58,94 +58,208 @@
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         </head>
         <body style="width: 100%;background-color: white;float: left">
-            <div style="float: left;width: 100%;margin-bottom: 0px;">
-                <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_1.jpg') ?>" style="width: 100%;float: left">
-            </div>
-            <div style="float: left;width: 100%;margin-top: 0px">
-                <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_2_temp_white.jpg') ?>"  style="width: 100%;float: left">
-                <div class="container">
-                    <div class="card-info"   style="font-family: DINNextLTPro-Medium;font-size: 12pt;color:#329fff;padding-top: 0;"><?php echo $_REQUEST['name'] ?></div>
-                    <div class="card-info"  style="font-family: DINNextLTPro-Medium;padding-top: 0"><?php echo $_REQUEST['title'] ?></div>
-                    <div class="card-info" style="font-family: DINNextLTPro-Medium;font-size: 7pt;color:#329fff;padding-top: 25px;">Islamic Relief Worldwide</div>
-                    <div class="card-info" style="font-family: DINNextLTPro-Medium;padding-top: 0;"><?php echo $_REQUEST['address'] ?></div>
-                    <div style="margin-top: 14px;float: left">
-                        <div class="card-info" style="padding-top: 0;">
-                            <span><?php echo $_REQUEST['tel'] ?></span>
+            <?php if (isset($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'covert') { ?>
+                <style>
+                    @font-face {
+                        font-family: DINNextLTPro-Regular;
+                        src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Regular_1.otf') ?>');
+                    }
+                    @font-face {
+                        font-family: DINNextLTPro-Medium;
+                        src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Medium_1.otf') ?>');
+                    }
+                    *{
+                        margin: 0;
+                        padding: 0;
+                        font-family: DINNextLTPro-Regular;
+                        font-size: 7pt;
+                        color: #435257;
+                    }
+                    .container{
+                        float: left;
+                        position: absolute;
+                        z-index: 1000;
+                        top: 250px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .container > div >div {
+                        margin-top: 4px;
+                    }
+                    .container > div,.container > div >div {
+                        float: left;
+                        width: 100%;
+                    }
+                    .title{
+                        float: left;
+                        text-align: right;
+                        margin-right: 10px;
+                        width:35%;
+                        ;color:#299FD5
+                    }
+                    .details{
+                        float: left;
+                        text-align: left;
+                        width:55%;
+                    }
+                </style>
+                <div style="float: left;width: 100%;margin-bottom: 0px;">
+                    <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_1.jpg') ?>" style="width: 100%;float: left">
+                </div>
+                <div style="float: left;width: 100%;margin-top: 0px">
+                    <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_2_temp_white.jpg') ?>"  style="width: 100%;float: left">
+                    <div class="container">
+                        <div >
+                            <span class="title">&nbsp;</span>
+                            <span class="details" style="font-family: DINNextLTPro-Medium;font-size: 12pt ;color:#299FD5"><?php echo $_REQUEST['name'] ?></span>
                         </div>
-                        <div class="card-info" style="">
-                            <span></span>
-                            <span><?php echo $_REQUEST['direct'] ?></span></div>
-                        <div class="card-info" style="">
-                            <span></span>
-                            <span><?php echo $_REQUEST['fax'] ?></span>
+                        <div >
+                            <span class="title">&nbsp;</span>
+                            <span class="details" ><?php echo $_REQUEST['title'] ?></span>
                         </div>
-                        <div class="card-info" style="">
-                            <span></span>
-                            <span><?php echo $_REQUEST['email'] ?></span>
+                        <div  style="margin-top: 32px;">
+                            <span class="title">&nbsp;</span>
+                            <span class="details" style="color:#299FD5 ;font-family:DINNextLTPro-Medium ;">Islamic Relief Worldwide</span>
                         </div>
-                        <div class="card-info" style="">
-                            <span></span>
-                            <span><?php echo $_REQUEST['web'] ?></span>
+                        <div style="">
+                            <span class="title">&nbsp;</span>
+                            <span class="details"><?php echo $_REQUEST['address'] ?></span>
+
                         </div>
-                        <div class="card-info" style="">
-                            <span></span>
-                            <span><?php echo $_REQUEST['charity'] ?></span>
+                        <div style="margin-top: 19px">
+                            <div >
+                                <span class="title">tel</span>
+                                <span class="details"><?php echo $_REQUEST['tel'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">direct</span>
+                                <span class="details"><?php echo $_REQUEST['direct'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">fax</span>
+                                <span class="details"><?php echo $_REQUEST['fax'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="margin-top: 2px">
+                                <span class="title">email</span>
+                                <span class="details"><?php echo $_REQUEST['email'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">web</span>
+                                <span class="details"><?php echo $_REQUEST['web'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">charity reg.</span>
+                                <span class="details"><?php echo $_REQUEST['charity'] ?></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="titles">
-                    <div  class="card-info">tel</div>
-                    <div  class="card-info">direct</div>
-                    <div  class="card-info">fax</div>
-                    <div  class="card-info">email</div>
-                    <div  class="card-info">web</div>
-                    <div  class="card-info">charity reg.</div>
+            <?php } else { ?>
+                <style>
+                    @font-face {
+                        font-family: DINNextLTPro-Regular;
+                        src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Regular_1.otf') ?>');
+                    }
+                    @font-face {
+                        font-family: DINNextLTPro-Medium;
+                        src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Medium_1.otf') ?>');
+                    }
+                    *{
+                        margin: 0;
+                        padding: 0;
+                        font-family: DINNextLTPro-Regular;
+                        font-size: 21pt;
+                        color: #435257;
+                    }
+                    .container{
+                        float: left;
+                        position: absolute;
+                        z-index: 1000;
+                        top: 110px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .container > div >div {
+                        margin-top: 15px;
+                    }
+                    .container > div,.container > div >div {
+                        float: left;
+                        width: 100%;
+                    }
+                    .title{
+                        float: left;
+                        text-align: right;
+                        margin-right: 20px;
+                        width:38%;
+                        ;color:#299FD5
+                    }
+                    .details{
+                        float: left;
+                        text-align: left;
+                        width:55%;
+                    }
+                </style>
+                <div style="float: left;width: 100%;margin-top: 0px">
+                    <img  src="<?php echo site_url('business-cards/IRW_BUSCARD_EN_2014-sample_2_temp_white.jpg') ?>"  style="width: 100%;float: left">
+                    <div class="container">
+                        <div >
+                            <span class="title">&nbsp;</span>
+                            <span class="details" style="font-family: DINNextLTPro-Medium;font-size: 36pt ;color:#299FD5"><?php echo $_REQUEST['name'] ?></span>
+                        </div>
+                        <div >
+                            <span class="title">&nbsp;</span>
+                            <span class="details" ><?php echo $_REQUEST['title'] ?></span>
+                        </div>
+                        <div  style="margin-top: 70px;">
+                            <span class="title">&nbsp;</span>
+                            <span class="details" style="color:#299FD5 ;font-family:DINNextLTPro-Medium ;">Islamic Relief Worldwide</span>
+                        </div>
+                        <div style="">
+                            <span class="title">&nbsp;</span>
+                            <span class="details"><?php echo $_REQUEST['address'] ?></span>
+
+                        </div>
+                        <div style="margin-top: 50px">
+                            <div >
+                                <span class="title">tel</span>
+                                <span class="details"><?php echo $_REQUEST['tel'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">direct</span>
+                                <span class="details"><?php echo $_REQUEST['direct'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">fax</span>
+                                <span class="details"><?php echo $_REQUEST['fax'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="margin-top: 2px">
+                                <span class="title">email</span>
+                                <span class="details"><?php echo $_REQUEST['email'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">web</span>
+                                <span class="details"><?php echo $_REQUEST['web'] ?></span>
+
+                            </div>
+                            <div class="card-info" style="">
+                                <span class="title">charity reg.</span>
+                                <span class="details"><?php echo $_REQUEST['charity'] ?></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <style>
-                @font-face {
-                    font-family: DINNextLTPro-Regular;
-                    src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Regular_1.otf') ?>');
-                }
-                @font-face {
-                    font-family: DINNextLTPro-Medium;
-                    src: url('<?php echo base_url('layout/fonts/DINNextLTPro-Medium_1.otf') ?>');
-                }
-                *{
-                    margin: 0px;
-                    margin-right: 0px!important;
-                    padding: 0px;
-                    font-family: DINNextLTPro-Regular;
-                    font-size: 7pt;
-                    color: #435257;
-                    text-align: left;
-                }
-                .container{
-                    left: 120px;
-                    position: absolute;
-                    z-index: 1000;
-                    top: 260px;
-                    /*width: 100%;*/
-                }
-                .card-info{
-                    padding-top: 2px;
-                    width: 100%;
-                    float: left;
-                    clear: both;
-                }
-                .titles{
-                    left: 0px;
-                    position: absolute;
-                    z-index: 1000;
-                    top: 349px;
-                    width: 115px;
-                }
-                .titles *{
-                    color: #329fff!important;
-                    font-family: DINNextLTPro-Medium !important;
-                    text-align: right;
-                }
-            </style>
+            <?php } ?>
         </body>
     </html>
 <?php } ?>
