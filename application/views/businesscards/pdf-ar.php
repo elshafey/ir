@@ -104,7 +104,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         </head>
         <body style="width: 100%;background-color: white;float: left">
-            <?php if (isset($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'covert') { ?>
+            <?php if (isset($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'convert') { ?>
                 <style>
                     @font-face {
                         font-family: DINNextLTPro-Regular;

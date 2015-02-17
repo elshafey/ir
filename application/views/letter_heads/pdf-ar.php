@@ -69,7 +69,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
         </head>
         <body style="width: 100%;background-color: white;float: left">
-            <?php if (isset($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'covert') { ?>
+            <?php if (isset($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'convert') { ?>
                 <div style="float: left;width: 100%;margin-bottom: 0px;">
                     <img  src="<?php echo site_url('letter_heads/IRW_LETTERHEAD_AR_2014-sample_1_temp2.jpg') ?>" style="width: 100%;float: left">
                 </div>
