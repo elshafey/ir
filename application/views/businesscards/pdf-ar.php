@@ -43,10 +43,10 @@
                 }
             </style>
             <div style="float: left;width: 100%;">
-                <img  src="<?php echo base_url('business-cards/IRW_BUSCARD_EN_AR_2014-sample_2_1.jpg') ?>" style="float: left;width: 100%;">
+                <img  src="<?php echo base_url('business-cards/back-ar.jpg') ?>" style="float: left;width: 100%;">
             </div>
             <div style="float: left;width: 100%;margin-top: 5px;">
-                <img  src="<?php echo base_url('business-cards/IRW_BUSCARD_EN_AR_2014-sample_4_temp_white.jpg') ?>"  style="float: left;width: 100%;">
+                <img  src="<?php echo base_url('business-cards/details-ar.jpg') ?>"  style="float: left;width: 100%;">
             </div>
             <div class="container">
                 <div >
@@ -148,10 +148,10 @@
                     }
                 </style>
                 <div style="float: left;width: 100%;margin-bottom: 0px;">
-                    <img  src="<?php echo base_url('business-cards/IRW_BUSCARD_EN_AR_2014-sample_2_1.jpg') ?>" style="width: 100%;float: left">
+                    <img  src="<?php echo base_url('business-cards/back-ar.jpg') ?>" style="width: 100%;float: left">
                 </div>
                 <div style="float: left;width: 100%;margin-top: 0px">
-                    <img  src="<?php echo base_url('business-cards/IRW_BUSCARD_EN_AR_2014-sample_4_temp_white.jpg') ?>"  style="width: 100%;float: left">
+                    <img  src="<?php echo base_url('business-cards/details-ar.jpg') ?>"  style="width: 100%;float: left">
                     <div class="container">
                         <div >
                             <span class="title">&nbsp;</span>
@@ -238,7 +238,7 @@
                     }
                 </style>
                 <div style="float: left;width: 100%;margin-top: 0px">
-                    <img  src="<?php echo base_url('business-cards/IRW_BUSCARD_EN_AR_2014-sample_4_temp_white.jpg') ?>"  style="width: 100%;float: left">
+                    <img  src="<?php echo base_url('business-cards/details-ar.jpg') ?>"  style="width: 100%;float: left">
                     <div class="container">
                         <div >
                             <span class="title">&nbsp;</span>
