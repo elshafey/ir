@@ -51,7 +51,7 @@ class Letter_head extends Template_conroller {
                 echo file_get_contents('uploads/business-cards/' . $name . '.png');
             }
         } else {
-            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 210 --page-height 294.041 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 210 --page-height '.($_REQUEST['language_id']==2? '293.5':'294').' --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
 //            echo $command;exit;
             if (shell_exec($command)) {
                 // set HTTP response headers

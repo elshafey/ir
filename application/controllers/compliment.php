@@ -43,7 +43,7 @@ class Compliment extends Template_conroller {
                 echo file_get_contents('uploads/business-cards/' . $name . '.png');
             }
         } else {
-            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 210 --page-height 100.37 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
+            $command = 'xvfb-run -a -s "-screen 0 1366x768x24" wkhtmltopdf --dpi 300 --page-width 205.7 --page-height 100.1 --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 "' . $url . '"   "' . $dir . 'uploads/business-cards/' . $name . '.pdf"';
 //            echo $command;exit;
             if (shell_exec($command)) {
                 // set HTTP response headers
