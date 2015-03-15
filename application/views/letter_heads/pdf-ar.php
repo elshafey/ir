@@ -19,6 +19,10 @@
                 <span class="left-details"><?php echo $_REQUEST['country'] ?></span>
                 <span class="right-details"><?php echo $_REQUEST['email'] ?></span>
             </div>
+            <div class="bottom">
+                <span style="text-align: right;float: right">رقم تسجيل المنظمة 328158</span>
+                <span style="text-align: left;float: left">رقم 23665572</span>
+            </div>
             <style>
                 @font-face {
                     font-family: DINNextLTPro-Regular;
@@ -36,7 +40,7 @@
                 .bottom{
                     position: absolute;
                     z-index: 1000;
-                    right: 38px;
+                    left: 38px;
                     top: 665px;
                     width: 127px;
                 }
@@ -85,6 +89,10 @@
                     <span class="left-details"><?php echo $_REQUEST['country'] ?></span>
                     <span class="right-details"><?php echo $_REQUEST['email'] ?></span>
                 </div>
+                <div class="bottom">
+                    <span style="text-align: right;float: right">رقم تسجيل المنظمة 328158</span>
+                    <span style="text-align: left;float: left">رقم 23665572</span>
+                </div>
                 <style>
                     @font-face {
                         font-family: DINNextLTPro-Regular;
@@ -104,8 +112,8 @@
                     .bottom{
                         position: absolute;
                         z-index: 1000;
-                        right: 60px;
-                        top: 1020px;
+                        left: 52px;
+                        top: 1018px;
                         width: 200px;
                     }
                     .left-details{float: left;}
@@ -145,6 +153,10 @@
                     <span class="left-details"><?php echo $_REQUEST['country'] ?></span>
                     <span class="right-details"><?php echo $_REQUEST['email'] ?></span>
                 </div>
+                <div class="bottom">
+                    <span style="text-align: right;float: right">رقم تسجيل المنظمة 328158</span>
+                    <span style="text-align: left;float: left">رقم 23665572</span>
+                </div>
                 <style>
                     @font-face {
                         font-family: DINNextLTPro-Regular;
@@ -164,9 +176,9 @@
                     .bottom{
                         position: absolute;
                         z-index: 1000;
-                        right: 205px;
+                        left: 205px;
                         top: 3380px;
-                        width: 650px;
+                        width: 640px;
                     }
                     .left-details{float: left;}
                     .right-details{float: right;}
